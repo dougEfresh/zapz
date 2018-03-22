@@ -110,7 +110,7 @@ func SetType(ty string) Option {
 	})
 }
 
-// WithDebug enables
+// WithDebug enables debugging output for logz
 func WithDebug(w io.Writer) Option {
 	return optionFunc(func(z *Zapz) {
 		logzio.SetDebug(w)(z.lz)
