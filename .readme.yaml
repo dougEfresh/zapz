@@ -1,0 +1,28 @@
+title:
+  name: "Zapz: [Uber's Zap](https://github.com/uber-go/zap) --> [logzio](https://github.com/logzio)"
+  description: "Zapz creates a zap.Logger that sends logs to logzio. \n
+  This creates a custom [WriterSync](https://github.com/uber-go/zap/blob/master/zapcore/write_syncer.go) that buffers data on disk and drains every 5 seconds by default\n
+  Zapz uses [logzio-go](https://github.com/dougEfresh/logzio-go) to transport logs via HTTP"
+user: dougEfresh
+project: zapz
+installation: >-
+  ```shell
+
+  $ go get -u github.com/dougEfresh/zapz
+
+  ```
+quickStart:
+  code: ""
+  description: ""
+examples:
+  - ""
+usages:
+  - "Set Debug level: `zapz.New(token, zapz.SetLevel(zapcore.DebugLevel))`"
+  - "Set CustomEncoder config: `zapz.New(token, zapz.SetEncodeConfig(cfg))`"
+  - "Set Custom log type:\n\nA zap field, default is zap.String(\"type\", \"zap-logger\") in the log to type\n\n`zapz.New(token, zapz.SetType(logzType))`"
+tests:
+  - |
+    ```shell
+    $ go test -v
+
+    ```
