@@ -113,7 +113,7 @@ func TestType(t *testing.T) {
 
 func TestConfig(t *testing.T) {
 
-	var cfg = enCfg
+	var cfg = DefaultConfig
 	cfg.TimeKey = "timestamp"
 	var sent []byte
 	ts := httptest.NewUnstartedServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {

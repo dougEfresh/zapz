@@ -29,7 +29,7 @@ import (
 )
 
 func main() {
-	l, err := zapz.New(os.Args[1], zapz.WithDebug())
+	l, err := zapz.New(os.Args[1], zapz.WithDebug(os.Stderr))
 	if err != nil {
 		panic(err)
 	}

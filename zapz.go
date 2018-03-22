@@ -30,7 +30,7 @@ func LogzTimeEncoder(t time.Time, enc zapcore.PrimitiveArrayEncoder) {
 }
 
 // Message needs to be the message key for logzio
-var enCfg = zapcore.EncoderConfig{
+var DefaultConfig = zapcore.EncoderConfig{
 	TimeKey:        "ts",
 	LevelKey:       "level",
 	NameKey:        "logger",
@@ -63,7 +63,7 @@ func New(token string, opts ...Option) (*zap.Logger, error) {
 	z := &Zapz{
 		lz:    logz,
 		level: zap.InfoLevel,
-		enCfg: enCfg,
+		enCfg: DefaultConfig,
 		typ:   defaultType,
 	}
 
@@ -110,7 +110,7 @@ func SetType(ty string) Option {
 	})
 }
 
-// WithDebug enables debugging output for logz
+// WithDebug enables debugging output for log
 func WithDebug(w io.Writer) Option {
 	return optionFunc(func(z *Zapz) {
 		logzio.SetDebug(w)(z.lz)
