@@ -1,7 +1,8 @@
 # Zapz: [Uber's Zap](https://github.com/uber-go/zap) --> [logzio](https://github.com/logzio)
 
 Zapz creates a zap.Logger that sends logs to logzio. 
- This creates a custom [WriterSync](https://github.com/uber-go/zap/blob/master/zapcore/write_syncer.go) that buffers data on disk and drains every 5 seconds by default
+ This creates a custom [WriterSync](https://github.com/uber-go/zap/blob/master/zapcore/write_syncer.go) that buffers data on disk and drains every 5 seconds.
+
  Zapz uses [logzio-go](https://github.com/dougEfresh/logzio-go) to transport logs via HTTP
 
 [![GoDoc][doc-img]][doc] [![Build Status][ci-img]][ci] [![Coverage Status][cov-img]][cov] [![Go Report][report-img]][report]
@@ -14,25 +15,25 @@ $ go get -u github.com/dougEfresh/zapz
 ## Quick Start
  
  ```go
-    package main
+package main
 
-    import (
+import (
   "os"
 
   "github.com/dougEfresh/zapz"
     )
 
-    func main() {
-	  l, err := zapz.New(os.Args[1]) //logzio token required
-	  if err != nil {
-		panic(err)
-      }
+func main() {
+  l, err := zapz.New(os.Args[1]) //logzio token required
+  if err != nil {
+    panic(err)
+  }
 
-	  l.Info("tester")
-	  // Logs are buffered on disk, this will flush it
-	  if l.Sync() != nil {
-       panic("oops")
-	}
+  l.Info("tester")
+  // Logs are buffered on disk, this will flush it
+  if l.Sync() != nil {
+      panic("oops")
+  }
 }
 ```
 
@@ -76,8 +77,6 @@ $ go test -v
 
 ```
 
-
-## Deployment
 
 ## Contributing
  All PRs are welcome

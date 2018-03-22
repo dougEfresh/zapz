@@ -1,7 +1,7 @@
 title:
   name: "Zapz: [Uber's Zap](https://github.com/uber-go/zap) --> [logzio](https://github.com/logzio)"
   description: "Zapz creates a zap.Logger that sends logs to logzio. \n
-  This creates a custom [WriterSync](https://github.com/uber-go/zap/blob/master/zapcore/write_syncer.go) that buffers data on disk and drains every 5 seconds by default\n
+  This creates a custom [WriterSync](https://github.com/uber-go/zap/blob/master/zapcore/write_syncer.go) that buffers data on disk and drains every 5 seconds.\n\n
   Zapz uses [logzio-go](https://github.com/dougEfresh/logzio-go) to transport logs via HTTP"
 user: dougEfresh
 project: zapz

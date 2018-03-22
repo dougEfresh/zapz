@@ -10,25 +10,25 @@
 ## Quick Start
  
  ```go
-    package main
+package main
 
-    import (
+import (
   "os"
 
   "github.com/dougEfresh/zapz"
     )
 
-    func main() {
-	  l, err := zapz.New(os.Args[1]) //logzio token required
-	  if err != nil {
-		panic(err)
-      }
+func main() {
+  l, err := zapz.New(os.Args[1]) //logzio token required
+  if err != nil {
+    panic(err)
+  }
 
-	  l.Info("tester")
-	  // Logs are buffered on disk, this will flush it
-	  if l.Sync() != nil {
-       panic("oops")
-	}
+  l.Info("tester")
+  // Logs are buffered on disk, this will flush it
+  if l.Sync() != nil {
+      panic("oops")
+  }
 }
 ```
 {{ .quickStart.code}}
@@ -72,8 +72,6 @@ go 1.x
 {{.}}
     
 {{- end }}
-
-## Deployment
 
 ## Contributing
  All PRs are welcome
