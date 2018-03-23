@@ -29,7 +29,7 @@ func LogzTimeEncoder(t time.Time, enc zapcore.PrimitiveArrayEncoder) {
 	enc.AppendString(t.UTC().Format(time.RFC3339Nano))
 }
 
-// Message needs to be the message key for logzio
+// DefaultConfig - Message needs to be the message key for logzio
 var DefaultConfig = zapcore.EncoderConfig{
 	TimeKey:        "ts",
 	LevelKey:       "level",
@@ -46,7 +46,7 @@ var DefaultConfig = zapcore.EncoderConfig{
 
 const defaultType = "zap-logger"
 
-// Zapz struc
+// Zapz struct for logging
 type Zapz struct {
 	lz    *logzio.LogzioSender
 	level zapcore.Level
