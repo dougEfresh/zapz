@@ -1,19 +1,19 @@
 # Zapz: [Uber's Zap](https://github.com/uber-go/zap) --> [logzio](https://github.com/logzio)
 
-Zapz creates a zap.Logger that sends logs to logzio. 
+Zapz creates a zap.Logger that sends logs to logzio.
  This creates a custom [WriterSync](https://github.com/uber-go/zap/blob/master/zapcore/write_syncer.go) that buffers data on disk and drains every 5 seconds.
 
  Zapz uses [logzio-go](https://github.com/dougEfresh/logzio-go) to transport logs via HTTP
 
 [![GoDoc][doc-img]][doc] [![Build Status][ci-img]][ci] [![Coverage Status][cov-img]][cov] [![Go Report][report-img]][report]
 
-## Installation 
+## Installation
 ```shell
 $ go get -u github.com/dougEfresh/zapz
 ```
 
 ## Quick Start
- 
+
  ```go
 package main
 
@@ -49,11 +49,11 @@ func main() {
 4. The Logzio token is given in the account page
 
 ## Usage
-    
+
 Set Debug level: `zapz.New(token, zapz.SetLevel(zapcore.DebugLevel))`
-    
+
 Set CustomEncoder config: `zapz.New(token, zapz.SetEncodeConfig(cfg))`
-    
+
 Set Custom log type:
 
 A zap field, default is zap.String("type", "zap-logger") in the log to type
@@ -62,7 +62,7 @@ A zap field, default is zap.String("type", "zap-logger") in the log to type
 
 
 ## Examples
-    
+
 
 
 
@@ -71,7 +71,7 @@ A zap field, default is zap.String("type", "zap-logger") in the log to type
 go 1.x
 
 ## Tests
-    
+
 ```shell
 $ go test -v
 
@@ -93,7 +93,7 @@ This project is licensed under the Apache License - see the [LICENSE](LICENSE) f
 
   [logz java](https://github.com/logzio/logzio-java-sender)
 
-### TODO 
+### TODO
 
 [doc-img]: https://godoc.org/github.com/dougEfresh/zapz?status.svg
 [doc]: https://godoc.org/github.com/dougEfresh/zapz

@@ -4,11 +4,11 @@
 
 [![GoDoc][doc-img]][doc] [![Build Status][ci-img]][ci] [![Coverage Status][cov-img]][cov] [![Go Report][report-img]][report]
 
-## Installation 
+## Installation
 {{ .installation }}
 
 ## Quick Start
- 
+
  ```go
 package main
 
@@ -43,21 +43,21 @@ func main() {
 3. Click the top menu gear icon (Account)
 4. The Logzio token is given in the account page
 
-## Usage 
+## Usage
 
 {{- range .usages }}
-    
+
 {{.}}
-    
+
 {{- end }}
 
 
-## Examples 
+## Examples
 
 {{- range .examples }}
-    
+
 {{.}}
-    
+
 {{- end }}
 
 
@@ -65,12 +65,12 @@ func main() {
 
 go 1.x
 
-## Tests 
+## Tests
 
 {{- range .tests }}
-    
+
 {{.}}
-    
+
 {{- end }}
 
 ## Contributing
@@ -88,7 +88,7 @@ This project is licensed under the Apache License - see the [LICENSE](LICENSE) f
 
   [logz java](https://github.com/logzio/logzio-java-sender)
 
-### TODO 
+### TODO
 
 [doc-img]: https://godoc.org/github.com/{{.user}}/{{.project}}?status.svg
 [doc]: https://godoc.org/github.com/{{.user}}/{{.project}}
