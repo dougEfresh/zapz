@@ -1,6 +1,6 @@
 # Zapz: [Uber's Zap](https://github.com/uber-go/zap) --> [logzio](https://github.com/logzio)
 
-Zapz creates a zap.Logger that sends logs to logzio.
+Zapz creates a zap.Logger that sends logs to logzio. 
  This creates a custom [WriterSync](https://github.com/uber-go/zap/blob/master/zapcore/write_syncer.go) that buffers data on disk and drains every 5 seconds.
 
  Zapz uses [logzio-go](https://github.com/dougEfresh/logzio-go) to transport logs via HTTP
@@ -56,14 +56,12 @@ Set CustomEncoder config: `zapz.New(token, zapz.SetEncodeConfig(cfg))`
 
 Set Custom log type:
 
-A zap field, default is zap.String("type", "zap-logger") in the log to type
-
-`zapz.New(token, zapz.SetType(logzType))`
+A type field is created by default: zap.String("type", "zap-logger"). You can change it like so  `zapz.New(token, zapz.SetType(logzType))`
 
 
 ## Examples
 
-
+[passwd-pot](https://github.com/dougEfresh/passwd-pot/blob/master/lambda/handler.go)
 
 
 ## Prerequisites

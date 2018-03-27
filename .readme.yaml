@@ -15,11 +15,11 @@ quickStart:
   code: ""
   description: ""
 examples:
-  - ""
+  - "[passwd-pot](https://github.com/dougEfresh/passwd-pot/blob/master/lambda/handler.go)"
 usages:
   - "Set Debug level: `zapz.New(token, zapz.SetLevel(zapcore.DebugLevel))`"
   - "Set CustomEncoder config: `zapz.New(token, zapz.SetEncodeConfig(cfg))`"
-  - "Set Custom log type:\n\nA zap field, default is zap.String(\"type\", \"zap-logger\") in the log to type\n\n`zapz.New(token, zapz.SetType(logzType))`"
+  - "Set Custom log type:\n\nA type field is created by default: zap.String(\"type\", \"zap-logger\"). You can change it like so  `zapz.New(token, zapz.SetType(logzType))`"
 tests:
   - |
     ```shell
