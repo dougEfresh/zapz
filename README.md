@@ -63,6 +63,8 @@ A type field is created by default: zap.String("type", "zap-logger"). You can ch
 
 [passwd-pot](https://github.com/dougEfresh/passwd-pot/blob/master/lambda/handler.go)
 
+[lambdazap](https://github.com/dougEfresh/lambdazap)
+
 
 ## Prerequisites
 

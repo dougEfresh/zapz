@@ -16,6 +16,7 @@ quickStart:
   description: ""
 examples:
   - "[passwd-pot](https://github.com/dougEfresh/passwd-pot/blob/master/lambda/handler.go)"
+  - "[lambdazap](https://github.com/dougEfresh/lambdazap)"
 usages:
   - "Set Debug level: `zapz.New(token, zapz.SetLevel(zapcore.DebugLevel))`"
   - "Set CustomEncoder config: `zapz.New(token, zapz.SetEncodeConfig(cfg))`"
