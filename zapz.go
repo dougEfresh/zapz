@@ -60,6 +60,11 @@ func New(token string, opts ...Option) (*zap.Logger, error) {
 	if err != nil {
 		return nil, err
 	}
+	return NewLogz(logz, opts...)
+}
+
+// NewLogz will create a zap logger compatible with logz
+func NewLogz(logz *logzio.LogzioSender, opts ...Option) (*zap.Logger, error) {
 	z := &Zapz{
 		lz:    logz,
 		level: zap.InfoLevel,
